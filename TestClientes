@@ -1,0 +1,27 @@
+import java.util.*;
+
+package cochesMedianteComposicion;
+
+
+public class TestPosiblesClientes {
+    public static void main(String[]args){
+        int numClientes=3;
+        PosiblesClientes reporte;
+        Llanta l1 = new Llanta(165.0,14.0,15.0);
+        Llanta l3 = new Llanta(165.0,14.0,15.0);
+        Llanta l4 = new Llanta(165.0,14.0,15.0);
+        Llanta l2 = new Llanta(165.0,14.0,15.0);
+        
+        reporte=new PosiblesClientes(3);
+        
+        reporte.agregaCliente(0,new Coche("matiz",l1,l2,l3,l4), new Cliente("Juan"));
+        reporte.agregaCliente(1,new Coche("polo"), new Cliente("Juan"));
+        reporte.agregaCliente(2,new Coche("matiz"), new Cliente("Pedro",46));
+        
+        System.out.println("\nListado de clientes y coches que interesan:");
+        for(int i=0;i<=2;i++){
+            reporte.despliegaPosibleCliente( i);
+        }
+        
+    }
+}
